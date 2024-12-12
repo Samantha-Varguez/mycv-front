@@ -27,7 +27,7 @@ export class EducationComponent {
    
   }
 
-  private getEducation()
+  public getEducation()
   {
    this.token = this.storageService.getSession("token");
 

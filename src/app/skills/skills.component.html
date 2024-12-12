@@ -1,1 +1,29 @@
-<p>skills works!</p>
+<div class="container">
+    <form [formGroup]="skillForm" (ngSubmit)="onSubmit()">
+      <div formArrayName="skills">
+        <div *ngFor="let skill of skills.controls; let i = index" [formGroupName]="i">
+          <div class="form-group">
+            <label for="skillName">Skill {{ i + 1 }}</label>
+            <input
+              id="skillName"
+              formControlName="skillName"
+              type="text"
+              class="form-control"
+              placeholder="Enter skill"
+            />
+            <button
+              type="button"
+              class="btn btn-danger"
+              (click)="removeSkill(i)"
+              *ngIf="skills.length > 1"
+            >
+              Remove Skill
+            </button>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="addSkill()">Add Skill</button>
+      <button type="submit" class="btn btn-success" [disabled]="!skillForm.valid">Submit</button>
+    </form>
+  </div>
+  

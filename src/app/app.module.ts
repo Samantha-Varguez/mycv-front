@@ -19,6 +19,7 @@ import { HeaderComponent } from './header/header.component';
 import { WorkexperienceComponent } from './workexperience/workexperience.component';
 import { SkillsComponent } from './skills/skills.component';
 import { CertificatesComponent } from './certificates/certificates.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { CertificatesComponent } from './certificates/certificates.component';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
-    GraphQLModule
+    GraphQLModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

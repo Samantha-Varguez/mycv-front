@@ -2,27 +2,31 @@ import { Injectable } from '@angular/core';
 import { Apollo, gql } from 'apollo-angular';
 import { HttpHeaders } from '@angular/common/http';
 
-const LINKS_QUERY = gql`
-  query FakeLinks  {
-    links  {
-        id
-        url
-        description
-      }
+const SKILLS_QUERY = gql`
+  query SkillsQuery {
+  skills(search: "*") {
+    id
+    name
+    postedBy
+    {
+    username
+    password
+    }
   }
+}
 `;
 
 @Injectable({
   providedIn: 'root'
 })
-export class GraphqlLinkService {
+export class GraphqlSkillsService {
 
   constructor(private apollo: Apollo) { }
 
-  getLinks(mytoken: string) {
+  getSkills(mytoken: string) {
     
       return this.apollo.query({
-        query: LINKS_QUERY,
+        query: SKILLS_QUERY,
         variables: {
         }, 
         context: {

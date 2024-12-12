@@ -1,25 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
 
-body {
-   background : #2E9ce6;
-   padding: 3em;
-   font-family: 'Raleway', 'Arial';
-   color: #fff;
-}
+.noto-sans-warang-citi-regular {
+   font-family: "Noto Sans Warang Citi", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+ }
 
-ul {
-   list-style-type: none;
-   margin: 0 0 2em 0;
+ body {
+   background: #e49292;
+   font-family: "Noto Sans Warang Citi", sans-serif;
+   margin: 0;
    padding: 0;
+
+   }
+
+   .resume-container {
+      background-color: rgb(229, 207, 207);
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 20px #bd5b63;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .left-section, .right-section {
+      flex: 1;
+    }
+
+    .content {
+      display: flex; 
+      gap: 20px;
+    }
+
+img {
+   height: 150px;
+   width: 150px;
+   border-radius: 50%;
+   padding: 20px;
+   overflow: hidden;
+   margin: 15px auto;
+   border: 15px groove rgb(255, 76, 130);
 }
 
-ul li {
-   display: inline;
-   margin-right: 30px;
-}
+h2 {
+   color: #bd5b63;
+   border-bottom: 2px solid #bd5b63;
+   margin-bottom: 10px;
+   font-size: 18px;
+ }
+ 
 
-a {
-   color: #0f0;
-   text-decoration: none;
-}
+ p {
+   font-size: 16px;
+   margin: 5px 0;
+ }
+

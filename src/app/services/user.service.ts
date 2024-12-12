@@ -4,6 +4,7 @@ import { User } from '../models/user/User'
 import { Token } from '../models/user/Token'
 import {Apollo, gql} from 'apollo-angular';
 
+
 const TOKENAUTH = gql`
   mutation TokenAuth($username: String!, $password: String!) {
     tokenAuth(username: $username, password: $password) {

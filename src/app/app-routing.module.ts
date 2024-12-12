@@ -6,6 +6,7 @@ import { LandingPageComponent } from "./landing-page/landing-page.component";
 import { ForgotPasswordComponent } from "./forgot-password/forgot-password.component";
 import { NewUserComponent } from "./new-user/new-user.component";
 import { ResetPasswordComponent } from "./reset-password/reset-password.component";
+import { EducationComponent } from './education/education.component';
 
 const routes: Routes = [
   { path: '', component: LandingPageComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'forgot-password', component: ForgotPasswordComponent }, 
   { path: 'newuser', component: NewUserComponent }, 
   { path: 'reset-password/:email/:token', component: ResetPasswordComponent }, 
+  { path: 'education', component:EducationComponent}
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

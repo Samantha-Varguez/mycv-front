@@ -1,3 +1,72 @@
-<p>home works!</p>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Warang+Citi&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class ="resume-container">
 
-<app-fake-product />
+            <div class="header">
+                <p *ngFor="let header of headers; let i = index">  
+                        
+                    <br> <b>{{ header.description }} </b>
+                        <br> <img src = {{header.url}}>
+                    <br> {{ header.phone }} 
+                    <br> {{ header.address }} 
+                    <br> {{ header.email }} 
+                    <br> {{ header.socialmedia }} 
+                   </p>
+            </div>
+            <div class="content">
+                <div class="left-section">
+                    <h2> Work Experience </h2>
+                    <div>
+                        <p *ngFor="let work of positions; let i = index">
+                            <br> {{ work.position }} 
+                            <br> {{ work.company }}
+                            <br> {{ work.location }} 
+                            <br> {{ work.description }} 
+                            <br> {{ work.startDate | date:'MM/yyyy' }} 
+                            <br> {{ work.endDate | date:'MM/yyyy' }} 
+                           </p>
+                    </div>
+                        <h2> Languages </h2>
+                            <p *ngFor="let language of languages; let i = index">
+                            <br> {{ language.language }} 
+                            <br> {{ "Level: " }} {{ language.level }} 
+                            </p>
+    
+                        <h2> Interests </h2>
+                     
+                            <p *ngFor="let int of interests; let i = index">
+                            <br> {{ int.name }} 
+                            </p>     
+                </div>
+       
+            
+<div class="right-section">
+            <h2> Education </h2>
+        <p *ngFor="let education of degrees; let i = index">
+        <br> {{ "Degree name: " }} {{ education.degree }} 
+        <br> {{" University: "}} {{ education.university }} 
+        <br> {{" Inicio: "}} {{ education.startDate | date:'MM/yyyy' }} 
+        <br> {{" Final: "}} {{ education.endDate | date:'MM/yyyy' }}
+       </p>
+
+            <h2> Skills </h2>
+                <p *ngFor="let sk of skills; let i = index">
+                    <br> {{ sk.name }} 
+                   </p>
+
+            <h2> Certificates </h2>
+                <p *ngFor="let cert of certificates; let i = index">
+                    <br> {{ cert.title }} 
+                    <br> {{" Institution: "}} {{ cert.institution }} 
+                    <br> {{" Year: "}} {{ cert.year }} 
+                </p>
+            </div>
+                </div>
+            </div>
+                    
+
+</body>
